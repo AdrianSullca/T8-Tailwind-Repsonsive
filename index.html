@@ -3,41 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Responsive Webpage Example</title>
     <link href="/style.css" rel="stylesheet" />
-    <title>Responsive Div Example</title>
   </head>
-  <body class="flex-col">
-    <!-- Responsive Div Block -->
-    <div class="bg-blue-500 p-4 text-white mb-5">
-      <!-- Base Styles (applies to all breakpoints) -->
-      <p class="mb-2">Base Styles (applies to all breakpoints)</p>
-
-      <!-- Small Screen (sm) Styles -->
-      <p class="sm:bg-green-500 sm:p-2 sm:text-yellow-900 mb-2">
-        Small Screen (sm) Styles
-      </p>
-
-      <!-- Medium Screen (md) Styles -->
-      <p class="md:bg-red-500 md:p-4 md:text-white mb-2">
-        Medium Screen (md) Styles
-      </p>
-
-      <!-- Large Screen (lg) Styles -->
-      <p class="lg:bg-purple-500 lg:p-6 lg:text-yellow-300 mb-2">
-        Large Screen (lg) Styles
-      </p>
-
-      <!-- Extra Large Screen (xl) Styles -->
-      <p class="xl:bg-indigo-500 xl:p-8 xl:text-white">
-        Extra Large Screen (xl) Styles
-      </p>
-    </div>
-    <div>
-      <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded sm:bg-green-500 sm:hover:bg-green-700 md:bg-red-500 md:hover:bg-red-700 lg:bg-purple-500 lg:hover:bg-purple-700 xl:bg-indigo-500 xl:hover:bg-indigo-700"
+  <body class="">
+    <!-- Navigation Bar -->
+    <nav>
+      <div
+        class="px-4 py-3 bg-blue-500 w-full text-white md:px-24 lg:flex lg:flex-row lg:justify-between lg:px-10"
       >
-        Responsive Button
-      </button>
-    </div>
+        <div class="font-bold">My Enhanced Website</div>
+        <div class="hidden lg:flex flex-row gap-4">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section>
+      <div
+        class="w-full bg-slate-800 flex flex-col justify-center items-center h-60 gap-2 text-white"
+      >
+        <p class="text-3xl text-center lg:text-5xl font-bold">
+          Welcome to My Enhanced Website
+        </p>
+        <p class="text-center">
+          Discover amazing content and services. Tailwind makes it magical!
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured Items Grid -->
+    <section class="pt-8">
+      <div
+        class="grid grid-rows-3 gap-8 md:grid md:grid-rows-2 md:grid-cols-2 md:mx-24 lg:grid lg:grid-cols-3 lg:grid-rows-1 lg:mx-10"
+      >
+        <div class="bg-white p-5 border rounded-lg drop-shadow-xl">
+          <h2 class="font-bold text-xl">Featured Item 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id
+            feugiat velit.
+          </p>
+          <img
+            class="mt-3 rounded-lg w-full max-h-52 object-cover"
+            src="./img/image1.jpg"
+            alt="Featured Item 1"
+          />
+        </div>
+        <div class="bg-white p-5 border rounded-lg drop-shadow-xl">
+          <h2 class="font-bold text-xl">Featured Item 2</h2>
+          <p>
+            Nulla facilisi. Sed euismod mauris at justo varius, ac ultricies
+            elit posuere.
+          </p>
+          <img
+            class="mt-3 rounded-lg w-full max-h-52 object-cover"
+            src="./img/image2.jpg"
+            alt="Featured Item 2"
+          />
+        </div>
+        <div class="bg-white p-5 border rounded-lg drop-shadow-xl">
+          <h2 class="font-bold text-xl">Featured Item 3</h2>
+          <p>
+            Quisque euismod elit eu felis vestibulum, vitae mattis tortor
+            sodales.
+          </p>
+          <img
+            class="mt-3 rounded-lg w-full max-h-52 object-cover"
+            src="./img/image3.jpg"
+            alt="Featured Item 3"
+          />
+        </div>
+        <!-- Add more items as needed -->
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="flex justify-center">
+      <div
+        class="w-[80%] md:w-1/2 lg:w-1/4 h-auto border bg-white mt-10 p-5 rounded-lg drop-shadow-xl"
+      >
+        <h2 class="font-bold text-xl">Contact Us</h2>
+        <form>
+          <div class="flex flex-col mt-2 gap-1">
+            <label class="font-bold" for="name">Name:</label>
+            <input
+              class="border-2 rounded-sm"
+              type="text"
+              id="name"
+              name="name"
+            />
+          </div>
+          <div class="flex flex-col mt-2 gap-1">
+            <label class="font-bold" for="email">Email:</label>
+            <input
+              class="border-2 rounded-sm"
+              type="email"
+              id="email"
+              name="email"
+            />
+          </div>
+          <div class="flex flex-col mt-2 gap-1">
+            <label class="font-bold" for="message">Message:</label>
+            <textarea
+              class="border-2 rounded-sm"
+              id="message"
+              name="message"
+              rows="4"
+            ></textarea>
+          </div>
+          <button
+            class="bg-blue-500 text-white rounded-md py-2 px-4 mt-4 text-sm"
+            type="submit"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Link to Responsive Design Example -->
+    <section>
+      <div>
+        <a href="./responsive.html">Check out our Responsive Design Example</a>
+      </div>
+    </section>
   </body>
 </html>
